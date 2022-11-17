@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head >
+<script src="https://kit.fontawesome.com/43b69dc540.js" crossorigin="anonymous"></script>
+<style>
+		body
+		{
+				background-image: "D:\Demo of webpage"('book.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;  
+				background-size: cover;
+		}
+		.a{text-align: center;
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+		.ab
+		{text-align: left;
+		 color: blue;
+			font-family: Arial, Helvetica, sans-serif;
+			}
+		.link {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+   padding: 10px 15px;
+   font-size: 20px;
+  }
+  [data-tab-info] {
+            display: none;
+        }
+          
+        .active[data-tab-info] {
+            display: block;
+        }
+          
+        .tab-content {
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(82, 75, 75);
+        }
+          
+        .tabs {
+            font-size: 40px;
+            color: rgb(33,19,13);
+            display: flex;
+            margin: 0;
+        }
+          
+        .tabs span {
+            background: rgb(238,238,228);
+            padding: 10px;
+            border: 1px solid rgb(255, 255, 255);
+        }
+		
+		
+		</style>
+</head>
+<body width="100%" height="100%" background = "D:\yoga\yoga11.jpg">
+<h1 class="a" >
+		<i class="fa-solid fa-hands-praying"></i>
+			WELCOME TO SAI YOGA CENTRE
+		</h1>
+		<h2 class="a" >
+           Practice At Home With the World’s Top Yoga Teachers
+        </h2>
+		
+		<a class="link" href="file:///D:/demo1.html">Sign up</a>
+		<a class="link" href="file:///D:/Loginpage.html">Log-in</a>
+		<a class="link" href="file:///D:/yoga/aboutus.html">About us</a>
+		<a class="link" href="file:///D:/yoga/contactus1.html">contact-us</a>
+		<ul>
+		<h3 class="ab" >
+          - Practice At Home With the World’s Top Yoga Teachers.
+		</h3>
+		<h3 class="ab">
+			- Live & Interactive with trainer guidance & Q&A. 
+		</h3>
+		<h3 class="ab">
+			- All sessions cover joint rotations, asanas, pranayama & meditation.
+		</h3>
+		<h3 class="ab">
+			- Attend any session on any day as per your schedule.
+		</h3>
+		</ul>
+		<img src="gifyoga.gif" alt="yoga man" style="width:300px;height:300px;" align="right">
+		
+		<div class="tabs">
+        <span data-tab-value="#tab_1">Fees as per course</span>
+        <span data-tab-value="#tab_2">Location of training</span>
+        <span data-tab-value="#tab_3">Timing</span>
+    </div>
+  
+    <div class="tab-content">
+        <div class="tabs__tab active" id="tab_1" data-tab-info>
+            <p>INR 749-->Valid for 1 month</p>
+			<p>INR 1,499-->Valid for 3 months</p>
+			<p>INR 2,249-->Valid for 6 months
+</p>
+        </div>
+        <div class="tabs__tab" id="tab_2" data-tab-info>
+            <p>Akurdi</p>
+			<p>Baner</p>
+			<p>Sangvi</p>
+  
+        </div>
+        <div class="tabs__tab" id="tab_3" data-tab-info>
+            <p>9am-11am</p>
+			<p>11am-1pm</p>
+			<p>4pm-6pm</p>
+			<p>7pm-9pm</p>
+  
+        </div>
+    </div>
+    <script type="text/javascript">
+        const tabs = document.querySelectorAll('[data-tab-value]')
+        const tabInfos = document.querySelectorAll('[data-tab-info]')
+  
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document
+                    .querySelector(tab.dataset.tabValue);
+  
+                tabInfos.forEach(tabInfo => {
+                    tabInfo.classList.remove('active')
+                })
+                target.classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>
